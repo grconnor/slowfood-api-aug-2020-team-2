@@ -1,6 +1,9 @@
 
 class Api::V1::ProductsController < ApplicationController
     def index
-      Product.all
+      products = Product.all
+
+      render json: { products: products  }
+      binding.pry
     end
 end
