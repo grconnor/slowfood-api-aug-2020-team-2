@@ -4,6 +4,5 @@ class Api::V1::ProductsController < ApplicationController
       products = Product.all
 
       render json: { products: products  }
-      binding.pry
     end
 end

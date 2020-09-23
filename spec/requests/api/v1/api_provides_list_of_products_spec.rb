@@ -1,9 +1,9 @@
 RSpec.describe Api::V1::ProductsController, type: :request do
-  let(:product1) { create(:product) }
-  let(:product2) { create(:product) }
-  let(:product3) { create(:product) }
-  let(:product4) { create(:product) }
-  let(:product5) { create(:product) }
+  let!(:product1) { create(:product) }
+  let!(:product2) { create(:product) }
+  let!(:product3) { create(:product) }
+  let!(:product4) { create(:product) }
+  let!(:product5) { create(:product) }
   
   describe 'GET /api/v1/products' do
     before do
