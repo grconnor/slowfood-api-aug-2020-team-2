@@ -29,7 +29,7 @@ RSpec.describe 'POST /api/v1/orders', type: :request do
       end
   
       it 'should respond with order_id' do
-        expect(response_json).to have_key 'order_id'
+        expect(response_json).to have_key 'order'
       end
   
       it 'order should have correct product in it' do
