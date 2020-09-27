@@ -18,7 +18,7 @@ RSpec.describe 'PUT /api/v1/orders/:id', type: :request do
     before do
       put "/api/v1/orders/#{order.id}",
       params: {
-        product: hamburger.id
+        product: pizza.id
       },
       headers: headers
     end

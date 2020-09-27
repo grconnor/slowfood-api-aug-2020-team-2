@@ -12,11 +12,12 @@ class Api::V1::OrdersController < ApplicationController
     end
 
     def update
-      binding.pry
-      order = Order.update(user: current_user)
-      product = Product.find(params["product"])
+      order = Order.find(params[:id])
+      product = Product.find(params[:product])
 
-      order.order_items.update(product: product)
+      order.order_items.create(product: product)
+
+
       render json: { order_id: order.id, message: "Item has been added to your order"}
     end
 
