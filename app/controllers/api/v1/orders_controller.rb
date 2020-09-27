@@ -17,8 +17,6 @@ class Api::V1::OrdersController < ApplicationController
 
       order.order_items.create(product: product)
 
-
       render json: { order_id: order.id, message: "Item has been added to your order"}
     end
-
 end
